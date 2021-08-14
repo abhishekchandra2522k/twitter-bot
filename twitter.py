@@ -24,7 +24,7 @@ for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
         print('Tweet Liked')
         tweet.retweet()
         print('Tweet Retweeted')
-        time.sleep(10)
+        time.sleep(216) # 216 sec because twitter has 50/3hr limit for RT and like
     except tweepy.TweepError as e:
         print(e.reason)
     except StopIteration:
